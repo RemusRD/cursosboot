@@ -1,0 +1,23 @@
+spring.datasource.driver.class.name: com.mysql.cj.jdbc.Driver
+spring.datasource.url: jdbc:mysql://@mysql.host@:3306/cursosboot
+spring.datasource.username: root
+spring.datasource.password:
+
+logging.level.org.hibernate.SQL: debug
+
+spring.jpa.database:  MYSQL
+spring.jpa.open-in-view: true
+spring.jpa.show-sql:  true
+spring.data.jpa.repositories.bootstrap-mode: default
+
+spring.jpa.database-platform: org.hibernate.dialect.MySQL5Dialect
+spring.jpa.hibernate.ddl-auto: update
+eureka.client.service-url.defaultZone: ${EUREKA_URL:http://@localhost:8761}/eureka/
+
+logging.level.org.springframework: DEBUG
+
+security:
+  jwt:
+    key:
+      public: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCqWWitxbuvFLWI7EcBHJm9z9OjM+O/OvcNrJazCHf9eRHeTmdpu1CcggdGBXMBOowWOCJlgB6A7fPlz77AeDsLnf1WFzaf58pligJqs34VVrbnum9u5yMynjXnwlvdUXDOobRKab/loxjFLJelLV5IVscu3eKttXDYblUpmA4+oQIDAQAB
+

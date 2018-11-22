@@ -6,11 +6,14 @@ import com.cdelhoyo.cursosboot.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.annotation.RequestScope;
 
 @RestController
 @RequestMapping("/courses")
 @CrossOrigin
+@PreAuthorize("#oauth2.hasScope('cursos')")
 public class CourseController {
 
 	private CourseService courseService;
